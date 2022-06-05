@@ -1,6 +1,15 @@
 # agrodoctor
 
-A new Flutter project.
+Agro Doctor is a crop advisory iOS & Android mobile application for farmers and 
+gardeners. It can detect plant diseases, nutrient deficiencies affecting crops and 
+pest damage using machine learning. 
+
+Used firebase (Auth / Storage)
+     TenserFlow lite
+     
+
+
+
 
 ## Getting Started
 
