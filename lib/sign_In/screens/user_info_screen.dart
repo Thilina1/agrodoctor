@@ -304,14 +304,54 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       height: 100,
                       child: Card(
                           child: ListView(
-                        children: const [Text("Fertilizer Calculator")],
+                        children: const [
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Icon(
+                              Icons.calculate_rounded,
+                            ),
+                          ),
+                          Text("Fertilizer Calculator")
+                        ],
                       )),
                     ),
                     const SizedBox(
                       width: 10,
                     ),
+                    Container(
+                      width: 113,
+                      height: 100,
+                      child: Card(
+                          child: ListView(
+                        children: const [
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Icon(
+                              Icons.bug_report_rounded,
+                            ),
+                          ),
+                          Text("Pests & diseases"),
+                        ],
+                      )),
+                    ),
                     const SizedBox(
                       width: 10,
+                    ),
+                    Container(
+                      width: 113,
+                      height: 100,
+                      child: Card(
+                          child: ListView(
+                        children: const [
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Icon(
+                              Icons.compost_rounded,
+                            ),
+                          ),
+                          Text("Cultivation        Tips")
+                        ],
+                      )),
                     ),
                   ],
                 ),
