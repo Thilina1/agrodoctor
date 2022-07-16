@@ -14,7 +14,12 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       backgroundColor: CustomColors.firebaseNavy,
       body: SafeArea(
-        child: Padding(
+        child: Container(
+          constraints: BoxConstraints.expand(),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/bg1.png"), fit: BoxFit.cover),
+          ),
           padding: const EdgeInsets.only(
             left: 16.0,
             right: 16.0,
@@ -33,13 +38,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       flex: 1,
                       child: Image.asset(
                         'assets/images/firebase_logo.png',
-                        height: 160,
+                        height: 100,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     Text(
                       'Agro',
                       style: TextStyle(
+                        fontWeight: FontWeight.w500,
                         color: CustomColors.firebaseYellow,
                         fontSize: 40,
                       ),
@@ -47,6 +53,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Text(
                       'Doctor',
                       style: TextStyle(
+                        fontWeight: FontWeight.w500,
                         color: CustomColors.firebaseOrange,
                         fontSize: 40,
                       ),

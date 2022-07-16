@@ -17,26 +17,24 @@ class _OnBoardState extends State<OnBoard> {
   List<OnboardModel> screens = <OnboardModel>[
     OnboardModel(
       img: 'assets/images/img-1.png',
-      text: "Belajar Dengan Metode Learning by Doing",
+      text: "Health Check",
       desc:
-          "Sebuah metode belajar yang terbuktiampuh dalam meningkatkan produktifitas belajar, Learning by Doing",
-      bg: Colors.white,
+          "Take a picture of your crop to detect diseases and receive treatment advice",
+      bg: Color(0XFF80CBC4),
       button: Color(0xFF4756DF),
     ),
     OnboardModel(
       img: 'assets/images/img-2.png',
-      text: "Dapatkan Kemudahan Akses Kapanpun dan Dimanapun",
-      desc:
-          "Tidak peduli dimanapun kamu, semua kursus yang telah kamu ikuti bias kamu akses sepenuhnya",
+      text: "Community",
+      desc: "Ask a question about your crop to receive help from the community",
       bg: Color(0xFF4756DF),
       button: Colors.white,
     ),
     OnboardModel(
       img: 'assets/images/img-3.png',
-      text: "Gunakan Fitur Kolaborasi Untuk Pengalaman Lebih",
-      desc:
-          "Tersedia fitur Kolaborasi dengan tujuan untuk mengasah skill lebih dalam karena bias belajar bersama",
-      bg: Colors.white,
+      text: "Cultivation Tips",
+      desc: "Receive farming advice about how to improve rour yield",
+      bg: Color(0XFFFF8F00),
       button: Color(0xFF4756DF),
     ),
   ];

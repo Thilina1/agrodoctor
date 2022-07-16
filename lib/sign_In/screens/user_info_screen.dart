@@ -8,6 +8,7 @@ import 'package:agrodoctor/sign_In/widgets/app_bar_title.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:intl/intl.dart';
 
 final List<String> imgList = [
   "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
@@ -90,14 +91,6 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   letterSpacing: 0.5,
                 ),
               ),
-              const SizedBox(height: 24.0),
-              Text(
-                'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',
-                style: TextStyle(
-                    color: CustomColors.firebaseGrey.withOpacity(0.8),
-                    fontSize: 14,
-                    letterSpacing: 0.2),
-              ),
               const SizedBox(height: 16.0),
               _isSigningOut
                   ? const CircularProgressIndicator(
@@ -154,6 +147,14 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    DateTime datetime = DateTime.now();
+    print(datetime.toString());
+    //output: 2021-10-17 20:04:17.118089
+
+    String datetime1 = DateFormat.MMMMEEEEd().format(datetime);
+    print(datetime1);
+    //output: 2021-10-1
+
     return Scaffold(
       backgroundColor: CustomColors.firebaseNavy,
       appBar: AppBar(
@@ -201,7 +202,6 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 8.0),
                 Text(
                   '( ${_user.email!} )',
                   style: TextStyle(
@@ -211,13 +211,60 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 24.0),
-                Text(
-                  'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',
-                  style: TextStyle(
-                      color: CustomColors.firebaseGrey.withOpacity(0.8),
-                      fontSize: 14,
-                      letterSpacing: 0.2),
+                const SizedBox(
+                  height: 13,
+                ),
+                ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                      // <-- Icon
+                      Icons.download,
+                      size: 24.0,
+                    ),
+                    label: const Text("Home")),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black, // Background color
+                  ),
+                  icon: const Icon(
+                    // <-- Icon
+                    Icons.cloud,
+                    size: 24.0,
+                  ),
+                  label: Text('Weather'),
+                  // <-- Text
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+
+                  icon: const Icon(
+                    // <-- Icon
+                    Icons.shop,
+                    size: 24.0,
+                  ),
+                  label: Text('Agro Shop'), // <-- Text
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black, // Background color
+                  ),
+                  icon: const Icon(
+                    // <-- Icon
+                    Icons.celebration,
+                    size: 24.0,
+                  ),
+                  label: Text('social'), // <-- Text
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    // <-- Icon
+                    Icons.person,
+                    size: 24.0,
+                  ),
+                  label: Text('About'), // <-- Text
                 ),
                 const SizedBox(height: 16.0),
                 _isSigningOut
@@ -409,7 +456,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                     ),
                     FlatButton(
                       minWidth: 300,
-                      color: Color.fromARGB(255, 15, 76, 180),
+                      color: const Color.fromARGB(255, 15, 76, 180),
                       textColor: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
@@ -426,12 +473,43 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 ),
                 elevation: 8,
                 shadowColor: Colors.green,
-                margin: EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
                 shape: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.white)),
+                    borderSide: const BorderSide(color: Colors.white)),
               ),
               const SizedBox(height: 8.0),
+              Text(
+                'Weather',
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    color: Colors.grey[1000],
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Open Sans',
+                    fontSize: 17),
+              ),
+              Container(
+                child: Card(
+                  child: Column(
+                    children: [
+                      const Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Today is',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        child: Text(datetime1),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
