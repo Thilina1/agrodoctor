@@ -4,8 +4,13 @@ Agro Doctor is a crop advisory iOS & Android mobile application for farmers and
 gardeners. It can detect plant diseases, nutrient deficiencies affecting crops and 
 pest damage using machine learning. 
 
-Used firebase (Auth / Storage)
+Used Flutter
+     firebase (Auth / Storage)
      TenserFlow lite
+     Google Teachable machine
+     
+This app contain onboard screen, Flash screen and home page     
+     
      
 
 
