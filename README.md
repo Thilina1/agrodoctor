@@ -9,7 +9,11 @@ Used Flutter
      TenserFlow lite
      Google Teachable machine
      
-This app contain onboard screen, Flash screen and home page     
+This app contain onboard screen, Flash screen and home page  
+
+Future development
+Going to add social wall for share farmers ideas and thoughts.
+Going to add online shop for buy suggest Fertilisers.
      
      
 ![agro doc](https://user-images.githubusercontent.com/25680169/179395387-4904213d-f301-4b7c-b403-2534ea3c0eb2.PNG)
